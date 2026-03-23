@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ankit Kumar | Full-Stack Developer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
+
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">Ankit Kumar<span class="dot">.</span></div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg-text">DEVELOPER</div>
+    <div class="hero-content">
+      <p class="hero-tag reveal">👋 Hello World! I'm</p>
+      <h1 class="hero-name reveal">
+        Ankit<br>Kumar
+      </h1>
+      <p class="hero-role reveal">
+        <span class="typed-text" id="typed"></span><span class="cursor-blink">|</span>
+      </p>
+      <p class="hero-desc reveal">
+        Aspiring Full-Stack Developer crafting responsive, user-friendly web experiences. Currently mastering React.js & Node.js.
+      </p>
+      <div class="hero-btns reveal">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-outline">Let's Connect</a>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section-label">01 / About</div>
+      <div class="about-grid">
+        <div class="about-text">
+          <h2 class="section-title reveal">Who I <span class="accent">Am</span></h2>
+          <p class="reveal">
+            I'm a Computer Science student at Sharda University, Greater Noida, with a passion for building beautiful and functional web applications. With a strong foundation in frontend development, I'm expanding my skills into full-stack territory.
+          </p>
+          <p class="reveal">
+            I believe in writing clean, efficient code and creating interfaces that people actually enjoy using. Currently in my journey from frontend to full-stack — one component at a time.
+          </p>
+        </div>
+        <div class="about-edu reveal">
+          <div class="edu-card">
+            <div class="edu-icon">🎓</div>
+            <div class="edu-info">
+              <h3>Sharda University</h3>
+              <p>B.Tech in Computer Science</p>
+              <span class="edu-year">2024 – Present</span>
+              <div class="edu-badge">SGPA: 8.3</div>
+            </div>
+          </div>
+          <div class="location-tag">
+            <span>📍</span> Greater Noida, India
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section skills" id="skills">
+    <div class="container">
+      <div class="section-label">02 / Skills</div>
+      <h2 class="section-title reveal">My Tech <span class="accent">Stack</span></h2>
+      <div class="skills-grid">
+
+        <div class="skill-category reveal">
+          <div class="skill-cat-header">
+            <span class="skill-icon">🖥️</span>
+            <h3>Frontend</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="tag" data-level="90">HTML</span>
+            <span class="tag" data-level="85">CSS</span>
+            <span class="tag" data-level="80">JavaScript</span>
+            <span class="tag" data-level="75">React.js</span>
+          </div>
+        </div>
+
+        <div class="skill-category reveal">
+          <div class="skill-cat-header">
+            <span class="skill-icon">⚙️</span>
+            <h3>Backend</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="tag learning">Node.js <em>(learning)</em></span>
+          </div>
+        </div>
+
+        <div class="skill-category reveal">
+          <div class="skill-cat-header">
+            <span class="skill-icon">💻</span>
+            <h3>Programming</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="tag">Java</span>
+            <span class="tag">Python</span>
+            <span class="tag">C</span>
+            <span class="tag">Dart <em>(basic)</em></span>
+          </div>
+        </div>
+
+        <div class="skill-category reveal">
+          <div class="skill-cat-header">
+            <span class="skill-icon">☁️</span>
+            <h3>Tools</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="tag">Git & GitHub</span>
+            <span class="tag">VS Code</span>
+            <span class="tag">Eclipse IDE</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <div class="section-label">03 / Projects</div>
+      <h2 class="section-title reveal">What I've <span class="accent">Built</span></h2>
+      <div class="projects-grid">
+
+        <div class="project-card reveal">
+          <div class="project-num">02</div>
+          <div class="project-top">
+            <div class="project-emoji">🍱</div>
+            <div class="project-links">
+              <span class="project-link-btn" title="GitHub">⟨/⟩</span>
+            </div>
+          </div>
+          <h3 class="project-title">Smart Tiffin Website</h3>
+          <p class="project-desc">
+            Subscription-based homemade meal delivery platform frontend. Designed API-ready structures for seamless backend integration.
+          </p>
+          <ul class="project-highlights">
+            <li>Modern responsive UI components</li>
+            <li>API-ready frontend structure</li>
+            <li>Cross-device compatibility</li>
+          </ul>
+          <div class="project-tech">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>React.js</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section class="section certifications" id="certifications">
+    <div class="container">
+      <div class="section-label">04 / Certifications</div>
+      <h2 class="section-title reveal">My <span class="accent">Credentials</span></h2>
+      <div class="certs-grid">
+
+        <div class="cert-card reveal">
+          <div class="cert-logo">🎓</div>
+          <div class="cert-info">
+            <span class="cert-issuer">Udemy</span>
+            <h3>Full Stack Web Development</h3>
+            <p>Hands-on experience building responsive web applications with modern frontend and backend tools.</p>
+          </div>
+          <div class="cert-badge">Certified</div>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-logo">☕</div>
+          <div class="cert-info">
+            <span class="cert-issuer">Oracle</span>
+            <h3>Java Foundations</h3>
+            <p>Core Java concepts and Object-Oriented Programming principles, certified by Oracle.</p>
+          </div>
+          <div class="cert-badge">Certified</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section-label">05 / Contact</div>
+      <h2 class="section-title reveal">Let's <span class="accent">Talk</span></h2>
+      <p class="contact-sub reveal">Have a project in mind? I'd love to collaborate. Reach out and let's build something great together.</p>
+
+      <div class="contact-grid">
+        <div class="contact-items reveal">
+          <a href="mailto:Ankitkumar8076084342@gmail.com" class="contact-item">
+            <span class="contact-icon">✉️</span>
+            <div>
+              <span class="contact-label">Email</span>
+              <span class="contact-val">Ankitkumar8076084342@gmail.com</span>
+            </div>
+          </a>
+          <a href="tel:+917463056002" class="contact-item">
+            <span class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#EFEFEF"><path d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z"/></svg></span>
+            <div>
+              <span class="contact-label">Phone</span>
+              <span class="contact-val">+91 7463056002</span>
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/ankit-kumar1002" target="_blank" rel="noopener noreferrer" class="contact-item">
+            <span class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" focusable="false" aria-hidden="true">
+                <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.05-1.86-3.05-1.86 0-2.14 1.45-2.14 2.95v5.67H9.35V9h3.41v1.6h.05c.48-.9 1.66-1.86 3.41-1.86 3.65 0 4.33 2.41 4.33 5.54v6.17ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.11 20.45H3.56V9h3.55v11.45ZM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46C23.2 24 24 23.23 24 22.28V1.72C24 .77 23.2 0 22.23 0Z"/>
+              </svg>
+            </span>
+            <div>
+              <span class="contact-label">LinkedIn</span>
+              <span class="contact-val">ankit-kumar1002</span>
+            </div>
+          </a>
+          <a href="https://github.com/the-ankitkumar" target="_blank" rel="noopener noreferrer" class="contact-item">
+            <span class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22" focusable="false" aria-hidden="true">
+                <path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.5-1.2-1.2-1.5-1.2-1.5-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.7 2.7 1.2 3.3.9.1-.7.4-1.2.7-1.5-2.6-.3-5.3-1.3-5.3-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.2 5 18.2 5.3 18.2 5.3c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.2 0 4.6-2.7 5.6-5.3 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3Z"/>
+              </svg>
+            </span>
+            <div>
+              <span class="contact-label">GitHub</span>
+              <span class="contact-val">the-ankitkumar</span>
+            </div>
+          </a>
+        </div>
+
+        <form class="contact-form reveal" id="contact-form">
+          <div class="form-group">
+            <input type="text" id="name" placeholder=" " required />
+            <label for="name">Your Name</label>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" placeholder=" " required />
+            <label for="email">Your Email</label>
+          </div>
+          <div class="form-group">
+            <textarea id="message" rows="4" placeholder=" " required></textarea>
+            <label for="message">Your Message</label>
+          </div>
+          <button type="submit" class="btn btn-primary full-width">Send Message </button>
+          <p class="form-success" id="form-success">✅ Message sent! I'll get back to you soon.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>© 2026 ankit kumar | Full StackPortfolio</p>
+      <div class="footer-socials">
+        <a href="https://www.linkedin.com/in/ankit-kumar1002" target="_blank">in</a>
+        <a href="mailto:Ankitkumar8076084342@gmail.com">✉</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
