@@ -608,8 +608,6 @@ body:hover .cursor { opacity: 1; }
   margin-bottom: 18px;
 }
 
-.project-emoji { font-size: 2.4rem; }
-
 .project-link-btn {
   width: 36px;
   height: 36px;
@@ -708,10 +706,7 @@ body:hover .cursor { opacity: 1; }
   box-shadow: var(--shadow);
 }
 
-.cert-logo {
-  font-size: 2.2rem;
-  flex-shrink: 0;
-}
+
 
 .cert-issuer {
   font-size: 0.78rem;
@@ -938,6 +933,13 @@ body:hover .cursor { opacity: 1; }
 .footer-socials a:hover {
   border-color: var(--accent);
   color: var(--accent);
+}
+
+.footer-socials a svg {
+  width: 1.4rem;
+  height: 1.4rem;
+  fill: currentColor;
+  display: block;
 }
 
 /* ===========================
