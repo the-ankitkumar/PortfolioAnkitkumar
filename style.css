@@ -13,8 +13,8 @@
   --text-muted: #8888a8;
   --border: rgba(124, 106, 247, 0.15);
   --shadow: 0 8px 40px rgba(124, 106, 247, 0.12);
-  --font-head: 'Syne', sans-serif;
-  --font-body: 'DM Sans', sans-serif;
+  --font-head: 'Sora', sans-serif;
+  --font-body: 'Inter', sans-serif;
   --radius: 16px;
   --radius-sm: 8px;
   --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
@@ -503,6 +503,8 @@ body:hover .cursor { opacity: 1; }
 }
 
 .skill-icon { font-size: 1.5rem; }
+.skill-icon { display: grid; place-items: center; color: var(--accent3); }
+.skill-svg { width: 25px; height: 25px; display: block; }
 
 .skill-cat-header h3 {
   font-family: var(--font-head);
@@ -799,6 +801,8 @@ body:hover .cursor { opacity: 1; }
   fill: currentColor;
   display: block;
 }
+.contact-icon svg { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.contact-icon svg.linkedin, .footer-socials a svg.linkedin { fill: currentColor; stroke: none; }
 
 .contact-label {
   display: block;
@@ -898,6 +902,11 @@ body:hover .cursor { opacity: 1; }
   flex-wrap: wrap;
   gap: 1rem;
 }
+.footer-copy { display: flex; flex-direction: column; align-items: flex-start; gap: 3px; text-align: left; }
+.footer-copy strong { color: var(--text); font-family: var(--font-head); font-size: 1rem; }
+.footer-copy span { color: var(--text-muted); font-size: .82rem; }
+.footer-inner { flex-direction: row; align-items: center; justify-content: space-between; text-align: left; }
+@media (max-width: 600px) { .footer-inner { flex-direction: column; align-items: center; text-align: center; } .footer-copy { align-items: center; text-align: center; } }
 
 .footer-logo {
   font-family: var(--font-head);
@@ -941,6 +950,7 @@ body:hover .cursor { opacity: 1; }
   fill: currentColor;
   display: block;
 }
+.footer-socials a svg { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 
 /* ===========================
    RESPONSIVE
@@ -957,6 +967,9 @@ body:hover .cursor { opacity: 1; }
   .contact-grid { grid-template-columns: 1fr; }
 
   .scroll-hint { display: none; }
+  .hero { grid-template-columns: 1fr; text-align: center; }
+  .hero-content { align-items: center; }
+  .hero-photo-card { width: min(100%, 320px); grid-row: 1; margin-bottom: 1rem; }
 }
 
 @media (max-width: 600px) {
@@ -968,3 +981,103 @@ body:hover .cursor { opacity: 1; }
   .about-stats { flex-wrap: wrap; gap: 1.5rem; }
   .footer-inner { flex-direction: column; text-align: center; }
 }
+
+/* React additions: passport photo field and project metadata */
+.about-side { display: flex; flex-direction: column; gap: 1.1rem; }
+.photo-field { display: flex; align-items: center; gap: 1.1rem; padding: 1rem; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); }
+.photo-frame { width: 180px; height: 230px; flex: 0 0 auto; display: grid; place-items: center; overflow: hidden; border: 1px dashed rgba(192,132,252,.7); border-radius: 12px; background: linear-gradient(145deg, var(--card2), #101019); color: var(--accent2); font-family: var(--font-head); font-size: 1.5rem; font-weight: 800; }
+.photo-frame img { width: 100%; height: 100%; object-fit: cover; }
+.photo-label { color: var(--text-muted); font-size: .85rem; margin-bottom: .35rem; }
+.photo-upload { display: inline-block; color: var(--accent2); font-size: .85rem; font-weight: 600; cursor: pointer; }
+.photo-upload:hover { color: var(--accent3); }
+#photo-input { display: none; }
+.project-number { color: var(--accent2); font-family: var(--font-head); font-weight: 700; letter-spacing: .08em; }
+.project-status { padding: 3px 9px; border: 1px solid rgba(56, 189, 248, .45); border-radius: 999px; color: var(--accent3); font-size: .68rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+.project-subtitle { color: var(--accent3); font-size: .9rem; margin-top: -.8rem; margin-bottom: 1rem; }
+.project-link-btn { font-size: 1.5rem; color: var(--accent2); }
+.project-actions { display: flex; align-items: center; gap: .7rem; }
+.project-demo-btn { padding: 5px 9px; border: 1px solid rgba(56, 189, 248, .4); border-radius: 6px; color: var(--accent3); font-size: .72rem; font-weight: 600; white-space: nowrap; }
+.project-demo-btn:hover { border-color: var(--accent3); background: rgba(56, 189, 248, .08); }
+.project-source-btn { padding: 5px 9px; border: 1px solid rgba(148, 163, 184, .28); border-radius: 6px; color: var(--text-muted); font-size: .68rem; font-weight: 600; letter-spacing: .06em; white-space: nowrap; }
+.project-source-btn:hover { border-color: var(--text-muted); color: var(--text); background: rgba(148, 163, 184, .08); }
+.project-source-btn { display: inline-flex; align-items: center; gap: 6px; }
+.project-source-btn svg { width: 15px; height: 15px; fill: currentColor; display: block; }
+.nav-links a.active { color: var(--accent); }
+.resume-download { display: inline-flex; align-items: center; gap: 8px; margin-top: 1rem; padding: 11px 20px; border-radius: 7px; background: linear-gradient(100deg, #13b9dc, #7c3aed); color: #fff; font-family: var(--font-head); font-size: .78rem; font-weight: 700; letter-spacing: .03em; box-shadow: 0 7px 22px rgba(56, 189, 248, .2); transition: transform var(--transition), box-shadow var(--transition); }
+.resume-download:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(124, 106, 247, .35); }
+.resume-download { font-size: 0; }
+.resume-download::before { content: '⇩'; font-size: 1.05rem; line-height: 1; }
+.resume-download::after { content: 'Download Resume'; font-size: .78rem; }
+.certificate-link { display: inline-block; margin-top: .7rem; color: var(--accent3); font-size: .85rem; font-weight: 600; }
+.certificate-link { margin-top: 0; }
+.certificate-link:hover { color: var(--accent2); }
+.resume-actions, .certificate-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: .8rem; }
+.certificate-actions { flex-direction: row; align-items: center; gap: .65rem; }
+.resume-actions .resume-download { margin-top: 0; border: 0; }
+.resume-actions button.resume-download::before { content: '▤'; }
+.resume-actions button.resume-download::after { content: 'View Resume'; }
+.certificate-link { border: 0; padding: 0; background: none; cursor: pointer; font-family: var(--font-body); }
+.certificate-link, .certificate-download { display: inline-flex; align-items: center; min-height: 32px; margin: 0; padding: 6px 10px; border-radius: 6px; font-size: .82rem; font-weight: 600; line-height: 1.2; white-space: nowrap; }
+.certificate-link { border: 1px solid rgba(56, 189, 248, .35); }
+.certificate-download { color: var(--accent2); border: 1px solid rgba(192, 132, 252, .3); align-self: auto; }
+.certificate-download:hover { color: var(--accent3); }
+.document-modal { position: fixed; inset: 5vh 5vw; z-index: 1100; display: flex; flex-direction: column; overflow: hidden; border: 1px solid var(--border); border-radius: 16px; background: var(--bg2); box-shadow: 0 20px 80px rgba(0,0,0,.65); }
+.document-modal::before { content: ''; position: fixed; inset: 0; z-index: -1; background: rgba(0,0,0,.72); }
+.document-modal-header, .document-modal-footer { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .8rem 1rem; }
+.document-modal-header { border-bottom: 1px solid var(--border); color: var(--text); }
+.document-modal-header button { border: 0; background: none; color: var(--text); font-size: 1.8rem; cursor: pointer; }
+.pdf-preview { flex: 1; min-height: 0; overflow: auto; padding: 1.2rem; background: #525252; text-align: center; }
+.pdf-page { display: block; width: min(100%, 850px); height: auto; margin: 0 auto 1rem; background: #fff; box-shadow: 0 4px 18px rgba(0,0,0,.3); }
+.pdf-error { color: #fff; padding: 2rem; }
+.document-modal-footer { justify-content: flex-end; border-top: 1px solid var(--border); }
+@media (max-width: 600px) { .photo-field { align-items: flex-start; } }
+
+/* Typography matching the reference portfolio */
+body { font-size: 16px; }
+body { cursor: auto; }
+.cursor, .cursor-follower { display: none !important; }
+.nav-logo { font-size: 1.55rem; font-weight: 600; }
+.nav-links a { font-size: 1rem; }
+.section-title { font-size: clamp(2rem, 4vw, 2.25rem); font-weight: 600; }
+.project-title { font-size: 1.35rem; font-weight: 600; }
+.project-desc, .cert-info p, .contact-sub { font-size: 1rem; }
+.skill-cat-header h3, .edu-info h3, .cert-info h3 { font-weight: 600; }
+
+/* Reference typography: bold Sora headings with clean Inter body text */
+.nav-logo { font-family: var(--font-head); font-size: 1.25rem; font-weight: 700; }
+.nav-links a { font-family: var(--font-body); font-size: 1rem; font-weight: 600; }
+.hero-tag { font-family: var(--font-head); font-size: clamp(3.6rem, 7vw, 6rem); line-height: 1.08; font-weight: 800; letter-spacing: -.04em; margin-bottom: .2rem; }
+.hero-name { font-family: var(--font-head); font-size: clamp(3.6rem, 7vw, 6rem); line-height: 1.08; font-weight: 800; }
+.hero-name { white-space: nowrap; }
+.hero-name-highlight { color: var(--text); }
+.hero { grid-template-columns: minmax(0, 1fr) minmax(280px, 440px); justify-items: stretch; gap: clamp(2rem, 6vw, 6rem); text-align: left; }
+.hero-content { align-items: flex-start; }
+.hero-photo-card { width: min(100%, 420px); aspect-ratio: 4 / 5; justify-self: center; padding: 12px; border: 1px solid rgba(56, 189, 248, .35); border-radius: 26px; background: rgba(20, 25, 39, .75); box-shadow: 0 0 36px rgba(56, 189, 248, .18), 0 0 70px rgba(168, 85, 247, .15); overflow: hidden; }
+.hero-photo-card img { width: 100%; height: 100%; object-fit: cover; object-position: center top; border-radius: 18px; }
+.availability-card { position: relative; width: min(100%, 520px); margin: .65rem 0 1.4rem; padding: 1rem 1.25rem 1rem 1.4rem; overflow: hidden; border: 1px solid rgba(124, 106, 247, .28); border-radius: 14px; background: linear-gradient(110deg, rgba(124, 106, 247, .13), rgba(15, 23, 42, .72) 58%); box-shadow: 0 12px 28px rgba(0, 0, 0, .16); }
+.availability-card::before { display: none; }
+.availability-heading { display: flex; align-items: center; gap: .6rem; color: var(--text); font-family: var(--font-head); font-size: .86rem; letter-spacing: .02em; }
+.availability-dot { width: 9px; height: 9px; border-radius: 50%; background: #22c55e; box-shadow: 0 0 0 4px rgba(34, 197, 94, .09), 0 0 14px rgba(34, 197, 94, .8); }
+@keyframes availabilityPulse { 0%, 100% { opacity: 1; transform: scale(1); box-shadow: 0 0 0 4px rgba(34, 197, 94, .09), 0 0 14px rgba(34, 197, 94, .8); } 50% { opacity: .35; transform: scale(.82); box-shadow: 0 0 0 7px rgba(34, 197, 94, .03), 0 0 5px rgba(34, 197, 94, .35); } }
+.availability-dot { animation: availabilityPulse 1.5s ease-in-out infinite; }
+.availability-card p { margin: .48rem 0 0 1.05rem; color: var(--text-muted); font-size: .82rem; line-height: 1.5; }
+#about .about-side { display: none; }
+#about .about-grid { grid-template-columns: 1fr; }
+
+/* Keep the profile image in About, beside the introduction */
+.hero { grid-template-columns: 1fr; text-align: center; }
+.hero-content { align-items: center; }
+.hero-photo-card { display: none; }
+#about .about-side { display: flex; align-items: center; justify-content: center; }
+#about .about-grid { grid-template-columns: minmax(0, 1fr) minmax(240px, 360px); }
+#about .photo-frame { width: 230px; height: 292px; }
+@media (max-width: 900px) { #about .about-grid { grid-template-columns: 1fr; } }
+.hero-role { font-family: var(--font-head); font-size: clamp(1.55rem, 3vw, 2.2rem); font-weight: 600; }
+.hero-desc { font-family: var(--font-body); font-size: clamp(1rem, 1.4vw, 1.2rem); line-height: 1.75; }
+.btn { font-family: var(--font-body); font-size: .95rem; font-weight: 600; }
+.section-title { font-family: var(--font-head); font-size: clamp(2rem, 4vw, 2.5rem); font-weight: 700; }
+.section-label { font-family: var(--font-body); font-size: .82rem; font-weight: 600; letter-spacing: .1em; }
+.about-text p, .project-desc, .cert-info p, .contact-sub { font-family: var(--font-body); font-size: 1rem; line-height: 1.75; }
+.project-title { font-family: var(--font-head); font-size: 1.25rem; font-weight: 700; }
+.project-highlights li, .project-tech span, .tag, .edu-info p, .contact-val { font-family: var(--font-body); }
+@media (max-width: 600px) { .hero-name { font-size: clamp(2.2rem, 10vw, 3.6rem); } }
